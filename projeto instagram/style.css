@@ -1,0 +1,303 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    color: #3c96ed;
+    text-decoration: none;
+}
+
+/*O corpo do projeto*/
+
+body{
+    background: #fafafa;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+/*o conteúdo usará a tela em 100%*/
+
+#wrapper{
+    height: 100vh;
+}
+
+#container{
+    margin: 0 auto;
+    min-height: 100%;
+    width: 800px;
+    display: flex;
+    align-items: center;
+}
+
+/*definindo que as colunas, ambas teram prioridade de posição e cada um ocupando 
+metade da tela*/
+
+.column{
+    flex-grow: 1;
+    width: 50%;
+}
+
+/*Definindo a coluna esquerda*/
+
+.left{
+    background-image: url(imagens/meu\ instagram.png);
+    background-size: 750px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+    margin-bottom: 50px;
+}
+
+/*criando um espaço*/
+
+.right{
+    padding-left: 20px;
+}
+
+/*as configurações do formulario*/
+
+.login-panel{
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/*tamanho da imagem fakegram*/
+
+.logo-img{
+    width: 175px;
+}
+
+/*Construção do formulario */
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*formato dos input*/
+
+input[type="password"], input[type="text"]{
+    background-color: #FFFFFF;
+    border: 1px solid rgb(236, 234, 234);
+    height: 40px;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 13px;
+    width: 320px;
+    color: #000000;
+}
+
+input[type="password"]::placeholder, input[type="text"]::placeholder{
+    color: rgb(165, 164, 164);
+}
+
+/*caracteristicas das bordas dos inputs login e senha*/
+
+input[type="password"]:focus, input[type="text"]:focus{
+    outline: 0;
+    border: 1px solid #a1a1a1;
+}
+
+/*Configurando o botão de entrar*/
+
+input[type="submit"]{
+    width: 320px;
+    margin-top: 10px;
+    height: 30px;
+    border: 0;
+    background-color: #3c96ed;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/*o formato do design do "Não possui uma conta ?"*/
+
+.infobox{
+    background-color: #fff;
+    height: 60px;
+    border: 1px solid rgb(236, 234, 234);
+    margin: 10px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infobox p a{
+    font-weight: bold;
+}
+
+/*alinhando o "obtenha o aplicativo"*/
+
+.get-app-panel{
+    margin-top: 20px;
+    text-align: center;
+}
+
+/*abaixo são as medidas dos app Appstore e Googleplay*/
+
+.app-buttons{
+    margin-top: 16px;
+}
+
+.app-buttons img{
+    height: 40px;
+    padding: 0 2px;
+}
+
+/*Criando o footer*/
+
+footer{
+    text-align: center;
+    height: 50px;
+    margin-top: -50px;
+}
+
+footer a{
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/*o @2025 instagram*/
+
+.text-small{
+    font-size: 12px;
+    font-weight: bold;
+    color: gray;
+    text-transform: uppercase;
+    padding-left: 20px;
+    display: inline-block;
+}
+
+/*Conteudo principal*/
+
+#container-singup{
+    margin: 0 auto;
+    min-height: 100%;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+}
+
+/*Cadastre-se para ver fotos e vídeos dos seus amigos.*/
+
+.message{
+    margin: 10px 70px;
+}
+
+.message span{
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #8e8e8e;
+}
+
+/*Configuração dos botões azuis*/
+
+.cta-button{
+    width: 320px;
+    margin: 10px 0;
+    height: 35px;
+    border: 0;
+    background-color: #3c96ed;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*Configurações das linhas e OU*/
+
+.divisor-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.line{
+    height: 1px;
+    background-color: #e6e6e6;
+    width: 35%;
+}
+
+/*o webkit foi usado para que seja usado em ios e outros sem problemas
+de compatibilidade*/
+
+.divisor-tag{
+    font-weight: bold;
+    margin: 0 2.5%;
+    color: #8e8e8e;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/*Responsividade*/
+
+/*Ajustando o tamanho de 850px ou inferior*/
+
+@media(max-width:850px){
+
+    /*restirando a foto do celular*/
+    .left{
+        display: none;
+    }
+
+    /*Ajustando o tamanho do conteudo*/
+
+    #container{
+        width: 70%;
+    }
+
+    /*tirando o espaço a esquerda para deixar centralizado na nova configuração*/
+
+    .right{
+        padding-left: 0;
+    }
+}
+
+/*Ajustando o tamanho de 560px ou inferior*/
+
+@media(max-width:560px){
+    #container{
+        width: 90%;
+    }
+
+    /*Tamanho do conteudo principal*/
+
+    #container-singup{
+        width: 90%;
+    }
+
+    /*aumento dos botões e da mensagem*/
+
+    input[type="password"], input[type="text"], input[type="submit"]{
+    width: 85%;
+    }
+
+    .cta-button{
+        width: 85%;
+    }
+
+    .message{
+        margin: 10px 25px;
+    }
+}
